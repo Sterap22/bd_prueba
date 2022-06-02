@@ -27,3 +27,10 @@ imagenes varchar(max),
 estado int,
 FOREIGN KEY (estado) REFERENCES estado(id),
 )
+
+create table commentUser(
+id int identity(1,1) primary key,
+comentario varchar(max),
+idUsuario int,
+FOREIGN KEY (idUsuario) REFERENCES usuario(id),
+)
